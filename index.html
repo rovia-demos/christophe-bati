@@ -18,8 +18,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/villa-facade-rouge-1080.webp" imagesrcset="assets/img/villa-facade-rouge-800.webp 800w, assets/img/villa-facade-rouge-1080.webp 1080w" imagesizes="(min-width: 1024px) 46vw, 100vw">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="preload" as="image" media="(min-width: 768px)" href="assets/img/hero-villa-1600.webp" imagesrcset="assets/img/hero-villa-1024.webp 1024w, assets/img/hero-villa-1600.webp 1600w, assets/img/hero-villa-2560.webp 2560w" imagesizes="100vw">
+<link rel="preload" as="image" media="(max-width: 767px)" href="assets/img/hero-villa-m-720.webp" imagesrcset="assets/img/hero-villa-m-720.webp 720w, assets/img/hero-villa-m-1080.webp 1080w" imagesizes="100vw">
+<link rel="stylesheet" href="assets/css/style.css?v=11">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,10 +67,11 @@
 
 <!-- HERO -->
 <section class="hero" id="top" aria-labelledby="titre">
-  <div class="hero__media">
-    <img src="assets/img/villa-facade-rouge-1080.webp" srcset="assets/img/villa-facade-rouge-800.webp 800w, assets/img/villa-facade-rouge-1080.webp 1080w" sizes="(min-width: 1024px) 46vw, 100vw" width="1080" height="1920" alt="Villa provençale aux façades rouges et volets verts après ravalement par Christophe Bâti" fetchpriority="high">
-    <span class="hero__tag"><span class="dot" aria-hidden="true"></span>Réalisation · Ravalement de façade</span>
-  </div>
+  <picture class="hero__bg">
+    <source media="(max-width: 767px)" srcset="assets/img/hero-villa-m-720.webp 720w, assets/img/hero-villa-m-1080.webp 1080w" sizes="100vw" width="1080" height="1920">
+    <img src="assets/img/hero-villa-1600.webp" srcset="assets/img/hero-villa-1024.webp 1024w, assets/img/hero-villa-1600.webp 1600w, assets/img/hero-villa-2560.webp 2560w" sizes="100vw" width="2560" height="1440" alt="Villa provençale à l'enduit ocre, volets verts et terrasse en pierre au coucher du soleil" fetchpriority="high">
+  </picture>
+  <div class="hero__in">
   <div class="hero__body">
     <h1 id="titre">Maçonnerie &amp; rénovation à Toulon <span class="h1__accent">depuis 2008.</span></h1>
     <p class="hero__lead">Christophe Birgul et son équipe construisent, ouvrent, carrèlent et rénovent maisons et appartements. Un seul interlocuteur, du devis jusqu'au chantier rendu propre.</p>
@@ -93,6 +95,7 @@
         <a href="#devis" data-type="Urgence / sinistre">Urgence</a>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -343,7 +346,7 @@
     <form class="form reveal" id="form" novalidate>
       <fieldset class="types">
         <legend>Type de travaux</legend>
-        <label><input type="radio" name="type" value="Gros œuvre / maçonnerie"><span>Gros œuvre / maçonnerie</span></label>
+        <label><input type="radio" name="type" value="Gros œuvre / maçonnerie"><span>Maçonnerie / gros œuvre</span></label>
         <label><input type="radio" name="type" value="Ouverture de mur porteur"><span>Mur porteur</span></label>
         <label><input type="radio" name="type" value="Rénovation intérieure"><span>Rénovation intérieure</span></label>
         <label><input type="radio" name="type" value="Carrelage"><span>Carrelage</span></label>
