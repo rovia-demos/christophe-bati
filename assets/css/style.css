@@ -64,7 +64,7 @@ p{margin:0}
 .brand__mark{width:40px;height:40px}
 .brand__txt{display:flex;flex-direction:column;line-height:1.05}
 .brand__txt strong{font:800 1.08rem/1 var(--f-d);font-stretch:118%;letter-spacing:-.01em;text-transform:uppercase}
-.brand__txt small{font-size:.7rem;letter-spacing:.06em;opacity:.75;margin-top:4px}
+.brand__txt small{font-size:.7rem;letter-spacing:.02em;opacity:.75;margin-top:4px}
 .nav{display:none}
 .header__tel{display:none}
 .burger{display:grid;place-content:center;gap:6px;width:46px;height:46px;border:0;background:transparent;border-radius:var(--r)}
@@ -72,7 +72,7 @@ p{margin:0}
 .header.is-open .burger span:first-child{transform:translateY(4px) rotate(45deg)}
 .header.is-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg)}
 .brand__txt,.btn{white-space:nowrap}
-@media (max-width:359px){.brand__mark{width:34px;height:34px}.brand__txt strong{font-size:.95rem}.brand__txt small{font-size:.64rem}.header__in{gap:8px}}
+@media (max-width:359px){.brand__mark{width:34px;height:34px}.brand__txt strong{font-size:.95rem}.brand__txt small{font-size:.7rem}.header__in{gap:8px}}
 @media (max-width:1179px){
   .header.is-open{background:var(--paper);color:var(--ink)}
   .header.is-open .nav{display:flex;position:fixed;top:var(--head);left:0;right:0;flex-direction:column;background:var(--paper);padding:8px var(--gut) 24px;box-shadow:0 20px 30px rgba(0,0,0,.12)}
@@ -271,7 +271,7 @@ p{margin:0}
 
 /* Avis */
 .big-score{display:inline-flex;align-items:baseline;color:var(--ocre-ink);font-variant-numeric:tabular-nums}
-.big-score small{font-size:.5em;color:var(--steel);margin-left:2px}
+.big-score small{font-size:max(.5em,1rem);color:var(--steel);margin-left:2px}
 .avis__nav{display:none;gap:10px}
 .avis__nav #prev .i{transform:rotate(180deg)}
 @media (min-width:1024px){.avis__nav{display:flex}}
